@@ -9,8 +9,7 @@ function isBroncoCoach() {
 }
 
 match /broncoTests/{testId} {
-  allow read, create, update: if isBroncoCoach();
-  allow delete: if false;
+  allow read, create, update, delete: if isBroncoCoach();
 }
 
 match /broncoConfig/{docId} {
