@@ -1,0 +1,177 @@
+/* Mobile field-use refinements for Bronco 1200 */
+html,
+body,
+.app-root,
+.main-shell,
+.view,
+.hero-panel,
+.card {
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .main-shell {
+    width: 100%;
+    padding: 10px 14px 52px;
+  }
+
+  .hero-panel {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px 0 22px;
+    overflow: hidden;
+  }
+
+  .hero-panel > div {
+    min-width: 0;
+  }
+
+  .hero-panel h2 {
+    max-width: 100%;
+    font-size: clamp(38px, 11.5vw, 58px);
+    line-height: .9;
+    letter-spacing: -.055em;
+  }
+
+  .hero-panel h2 span {
+    display: block;
+    max-width: 100%;
+    font-size: .74em;
+    line-height: .96;
+    letter-spacing: -.045em;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    margin: 16px 0 0;
+    font-size: 15px;
+    line-height: 1.48;
+  }
+
+  .route-visual {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .route-visual > div {
+    min-width: 0;
+  }
+
+  .route-visual p {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .setup-card {
+    overflow: hidden;
+  }
+
+  #setupPanel {
+    padding-bottom: 92px;
+  }
+
+  .start-bar {
+    position: fixed;
+    left: max(12px, env(safe-area-inset-left));
+    right: max(12px, env(safe-area-inset-right));
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    z-index: 29;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 20px;
+    background: rgba(12, 19, 29, .94);
+    box-shadow: 0 16px 48px rgba(0,0,0,.48), 0 0 0 1px rgba(200,255,61,.04) inset;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .start-bar > div {
+    min-width: 68px;
+    justify-content: center;
+  }
+
+  .start-bar strong {
+    font-size: 25px;
+  }
+
+  .start-bar span {
+    font-size: 9px;
+  }
+
+  .btn-start {
+    width: 100%;
+    min-width: 0;
+    min-height: 56px;
+    border-radius: 15px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
+  }
+
+  .brand-button {
+    gap: 9px;
+    min-width: 0;
+  }
+
+  .brand-button strong {
+    font-size: 13px;
+  }
+
+  .brand-button small {
+    font-size: 9px;
+  }
+
+  .hero-panel h2 {
+    font-size: clamp(36px, 10.8vw, 48px);
+  }
+
+  .hero-panel h2 span {
+    font-size: .72em;
+  }
+
+  .route-visual {
+    gap: 8px;
+  }
+
+  .route-visual > div {
+    min-height: 68px;
+    border-radius: 16px;
+  }
+
+  .route-visual b {
+    font-size: 24px;
+  }
+
+  .route-visual p {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .participant-grid {
+    gap: 9px;
+  }
+
+  .participant-chip {
+    min-height: 60px;
+  }
+
+  .start-bar {
+    /* Override the old mobile column layout. */
+    flex-direction: row;
+    align-items: center;
+  }
+}
