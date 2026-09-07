@@ -1,0 +1,12 @@
+// MERGE dette inn i eksisterende Firestore-regler for samnanger-g14-f10a1.
+// IKKE deploy denne filen som hele rules-filen, fordi prosjektet også brukes av andre apper.
+
+match /broncoTests/{testId} {
+  allow read, create, update: if request.auth != null;
+  allow delete: if false;
+}
+
+match /broncoConfig/{docId} {
+  allow read, create, update: if request.auth != null;
+  allow delete: if false;
+}
