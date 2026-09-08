@@ -2,14 +2,14 @@
   "name": "Bronco 1200 – Samnanger G14",
   "short_name": "Bronco 1200",
   "description": "Live Bronco-test med Firestore-historikk og spillerutvikling.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#070b12",
   "theme_color": "#070b12",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/apple-touch-icon.png?v=20260907-1",
+      "src": "./apple-touch-icon.png?v=20260907-1",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
